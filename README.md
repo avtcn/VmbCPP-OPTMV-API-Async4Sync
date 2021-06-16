@@ -3,7 +3,7 @@ Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
 
 # Getting Started
 * Vimba SDK
-  Use the latest version, such as Vimba 2.1.3 on http://www.alliedvision.com/
+  Use the latest version, such as Vimba 4.2/4.3 on http://www.alliedvision.com/
 * OPTMV Camera API or similar one
   The API includes following calls:
   1. OpenCamera()
@@ -33,3 +33,4 @@ Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
 
 # Version
   1. 2019-05-17 18:22:55 Joe Ge (joe.ge@alliedvision.com), initilized first version.
+    2. 2021-06-16 18:45:36 Upgraded to Vimba 4.3/4.2
