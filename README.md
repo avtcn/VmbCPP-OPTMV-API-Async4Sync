@@ -18,7 +18,7 @@ Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
 
   Put this example in following folder:
   ```
-    C:\Users\Public\Documents\Allied Vision\Vimba_2.1\VimbaCPP_Examples\VimbaCPP-OPTMV-API
+    C:\Users\Public\Documents\Allied Vision\Vimba_4.3\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\Build\VS2010
   ```
 
   Compile Tool:  
