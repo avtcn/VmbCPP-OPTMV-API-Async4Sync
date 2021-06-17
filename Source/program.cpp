@@ -122,7 +122,9 @@ int main( int argc, char* argv[] )
     std::cout << "///      Save photo into file with raw data format.        ///\n";
     std::cout << "///                                                        ///\n";
     std::cout << "/// 2021-06-16 18:30:30 by Joe Ge                          ///\n";
-    std::cout << "///      Upgrade to support Vimba 4.2                      ///\n";
+    std::cout << "///      Upgrade to support Vimba 4.2 / 4.3 for            ///\n";
+    std::cout << "///                                      Alvium USB3       ///\n";
+    std::cout << "///                                                        ///\n";
     std::cout << "///                                                        ///\n";
     std::cout << "//////////////////////////////////////////////////////////////\n\n";
 
@@ -150,8 +152,11 @@ int main( int argc, char* argv[] )
 	std::cout << "A camera opened: " << strOpenedCameraName.c_str() << std::endl;
 	std::cout << "\nPress Enter key to stop ...\n\n\n";
 
+
+
+
 	// Start image acquisition 
-	camera.StartAcquire(3); //  1. Software trigger  2. Hardware trigger  3. Free Run trigger 
+	camera.StartAcquire(1); //  1. Software trigger  2. Hardware trigger  3. Free Run trigger 
 
 
 
@@ -164,7 +169,7 @@ int main( int argc, char* argv[] )
 		std::vector<VmbUchar_t> imageRaw;
 
 		// Take one photo !!! 
-		camera.Shot(imageRaw);
+		camera.Shot(imageRaw, 10*1000);
 
 		// Save raw data of image
 		// Use ImageJ or similar tool to view
