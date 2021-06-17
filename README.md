@@ -25,7 +25,7 @@ Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
     *Vision Studio 2017 Community*
 
   Cameras:  
-  Allied Vision GigE Cameras, Such as Manta G895B
+    Allied Vision GigE Cameras, Such as Manta G895B, Alvium U-319m
 
 # Contribute
   For more information and help, please contact AVTCN AE Team (support@alliedvision.com).
@@ -33,4 +33,5 @@ Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
 
 # Version
   1. 2019-05-17 18:22:55 Joe Ge (joe.ge@alliedvision.com), initilized first version.
-    2. 2021-06-16 18:45:36 Upgraded to Vimba 4.3/4.2
+  2. 2021-06-16 18:45:36 Upgraded to Vimba 4.3/4.2
+
