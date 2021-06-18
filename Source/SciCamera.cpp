@@ -131,8 +131,10 @@ long SciCamera::StopAcquire()
 
 long SciCamera::Shot(std::vector<VmbUchar_t> & photo, int msTimeout)
 {
-	if (msTimeout < 1000)
+	if (msTimeout < 1000) {
 		msTimeout = 1000;
+        std::cout << "WaitForNextImageReady(): msTimeout = "<< msTimeout << " is too small and changed to 1000ms !!! \n";
+	}
 
 	if (m_nCameraMode == 1)
 	{
@@ -143,7 +145,7 @@ long SciCamera::Shot(std::vector<VmbUchar_t> & photo, int msTimeout)
 		// Wait unitl sw triggered image is ready or time out happen 
 		if (WaitForNextImageReady(msTimeout) == 0)
 		{
-			std::cout << "Image is Ready !!! \n";
+			std::cout << "WaitForNextImageReady(): Image is Ready !!! \n";
 
 			// TODO: try to get the image triggered by above Software trigger
 			int nBufferSize = -1;
@@ -163,7 +165,7 @@ long SciCamera::Shot(std::vector<VmbUchar_t> & photo, int msTimeout)
 		}
 		else
 		{
-			std::cout << "Failed to wait for nexe image !!!\n";
+			std::cout << "Failed to wait for nexe image: Time Out !!!\n";
 		}
 	}
 	else 
