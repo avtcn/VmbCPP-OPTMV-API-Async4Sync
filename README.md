@@ -1,5 +1,6 @@
 ## Introduction 
-Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
+Implement OPTMV Camera Interface API based on Vimba SDK C++ API.  
+More details: https://github.com/avtcn/notes/blob/master/vimbasdk/vimba-cpp-3-programming-modes-api-console/vimba-cpp-3-programming-modes-api-console.md  
 
 ## Getting Started
 * Vimba SDK
