@@ -156,8 +156,8 @@ int main( int argc, char* argv[] )
 
 
 	// Start image acquisition mode
-	//camera.StartAcquire(1); //  1. Software trigger  
-	camera.StartAcquire(2); //  2. Hardware trigger  
+	camera.StartAcquire(1); //  1. Software trigger  
+	//camera.StartAcquire(2); //  2. Hardware trigger  
 	//camera.StartAcquire(3); //  3. Free Run trigger 
 
 

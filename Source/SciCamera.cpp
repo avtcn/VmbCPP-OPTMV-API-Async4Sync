@@ -234,6 +234,23 @@ bool SciCamera::SetInternalMode(int mode)
 	FeaturePtr feature;
 	std::string lineMode;
 
+	switch (mode)
+	{
+    case 1:
+        std::cout << __FUNCTION__ << "(): " << "set camera mode to " << mode << ", Software Trigger" << std::endl;
+        break;
+    case 2:
+        std::cout << __FUNCTION__ << "(): " << "set camera mode to " << mode << ", Hardware Trigger" << std::endl;
+        break;
+    case 3:
+        std::cout << __FUNCTION__ << "(): " << "set camera mode to " << mode << ", Free Run Trigger" << std::endl;
+        break;
+	default:
+        std::cerr << __FUNCTION__ << "(): " << "set camera mode to " << mode << ", WRONG Trigger" << std::endl;
+		break;
+	}
+	std::cout << std::endl;
+
 	m_nCameraMode = mode; 
 	switch(mode)
 	{
