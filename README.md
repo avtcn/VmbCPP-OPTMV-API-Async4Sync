@@ -3,7 +3,7 @@ Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
 
 ## Getting Started
 * Vimba SDK
-  Use the latest version, such as Vimba 4.2/4.3 on http://www.alliedvision.com/
+  Use the latest version, such as Vimba 4.2/4.3/5.0 on http://www.alliedvision.com/
 * OPTMV Camera API or similar one
   The API includes following calls:
   1. OpenCamera()
@@ -16,9 +16,11 @@ Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
 
 ## Build and Test
 
-  Put this example in following folder:
+  Put this example in following folder, such as:
   ```
-    C:\Users\Public\Documents\Allied Vision\Vimba_4.3\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\Build\VS2010
+C:\Users\Public\Documents\Allied Vision\Vimba_4.3\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\
+
+C:\Users\Public\Documents\Allied Vision\Vimba_5.0\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\
   ```
 
   Compile Tool:  
@@ -35,6 +37,7 @@ Implement OPTMV Camera Interface API based on Vimba SDK C++ API.
 
 
 ## Version
-  1. 2019-05-17 18:22:55 Joe Ge (joe.ge@alliedvision.com), initilized first version.
+  1. 2019-05-17 18:22:55 Joe Ge (joe.ge@alliedvision.com), initialized first version.
   2. 2021-06-16 18:45:36 Upgraded to Vimba 4.3/4.2
+  3. 2021-11-23 11:07:53 Vimba 5.0 passed and Hardware trigger OK.
 

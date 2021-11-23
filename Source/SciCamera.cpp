@@ -244,7 +244,8 @@ bool SciCamera::SetInternalMode(int mode)
 		feature->SetValue("FrameStart");
 		/// Select Line1
 		SP_ACCESS(m_pCamera)->GetFeatureByName("TriggerSource", feature);
-		feature->SetValue("Line1");
+		feature->SetValue("Line1"); // for Manta's first trigger input
+		feature->SetValue("Line0"); // for Alvium USB3's first trigger input
 		/// configuring rising edge trigger
 		SP_ACCESS(m_pCamera)->GetFeatureByName("TriggerActivation", feature);
 		feature->SetValue("RisingEdge");
