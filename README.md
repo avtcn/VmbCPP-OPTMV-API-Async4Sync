@@ -13,6 +13,13 @@ More details: https://github.com/avtcn/notes/blob/master/vimbasdk/vimba-cpp-3-pr
   4. StopAcquire()
   5. CloseCamera()
 
+此SciCamera实现了一个AVT相机类，并实现如下接口：
+1. `OpenCamera()` - 打开相机
+2. `StartAcquire()` - 开始相机采集模式
+3. `Shot()` - 拍照，此步骤可以一直连续使用下去（支持三种拍照模式：软件触发，硬件触发，自由采集）
+4. `StopAcquire()` - 停止相机采集模式 
+5. `CloseCamera()` - 打开相机
+
 
 
 ## Build and Test
