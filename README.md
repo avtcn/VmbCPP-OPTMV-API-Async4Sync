@@ -202,6 +202,7 @@ int main( int argc, char* argv[] )
 
 运行结果如下，可以通过回车键进行中止：
 ![](vimba-cpp-3-modes-trigger-console-api.png)
+![](https://github.com/avtcn/notes/raw/master/vimbasdk/vimba-cpp-3-programming-modes-api-console/vimba-cpp-3-modes-trigger-console-api.png)
 
 
 
