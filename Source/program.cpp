@@ -125,6 +125,8 @@ int main( int argc, char* argv[] )
     std::cout << "///      Upgrade to support Vimba 4.2 / 4.3 for            ///\n";
     std::cout << "///                                      Alvium USB3       ///\n";
     std::cout << "///                                                        ///\n";
+    std::cout << "/// 2022-03-01 16:42:04 by Joe Ge                          ///\n";
+    std::cout << "///      Tried with Vimba 5.1 + Alvium U2050m              ///\n";
     std::cout << "///                                                        ///\n";
     std::cout << "//////////////////////////////////////////////////////////////\n\n";
 
@@ -145,6 +147,8 @@ int main( int argc, char* argv[] )
 	{
 		cameras[0]->GetID(strCameraID);
 		camera.OpenCamera(strCameraID.c_str());
+
+		std::cout << "Set to 18ms exposure time for this camera." << std::endl;
         camera.SetExposureTime(18 * 1000.00f);
 	}
 	else
@@ -163,9 +167,9 @@ int main( int argc, char* argv[] )
 
 
 	// Start image acquisition mode - choose one of below
-	//camera.StartAcquire(1); //  1. Software trigger  
+	camera.StartAcquire(1); //  1. Software trigger  
 	//camera.StartAcquire(2); //  2. Hardware trigger  
-	camera.StartAcquire(3); //  3. Free Run trigger 
+	//camera.StartAcquire(3); //  3. Free Run trigger 
 
 
 	// Capture Images in one of three modes: SW/HW/Free
