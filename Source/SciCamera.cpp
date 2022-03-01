@@ -326,6 +326,16 @@ bool SciCamera::SetExposureTime(double us)
 			return false;
 	} 
 
+	// TO DEL: test fixed fps
+	/*
+    FeaturePtr feature;
+    SP_ACCESS(m_pCamera)->GetFeatureByName("AcquisitionFrameRateEnable", feature);
+	feature->SetValue(true);
+    SP_ACCESS(m_pCamera)->GetFeatureByName("AcquisitionFrameRate", feature);
+	feature->SetValue(2.0f);
+	*/
+
+
 	return true;
 }
 
