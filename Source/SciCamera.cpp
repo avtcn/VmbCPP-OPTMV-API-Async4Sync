@@ -309,6 +309,28 @@ bool SciCamera::SetInternalMode(int mode)
 }
 
 
+
+bool SciCamera::SetExposureTime(double us)
+{
+	if (SP_ISNULL(m_pCamera))
+    {
+		return false;
+    }
+
+	// Trigger software signal
+	FeaturePtr pCommandFeature;
+	if( VmbErrorSuccess == m_pCamera->GetFeatureByName( "ExposureTime", pCommandFeature ) )
+	{
+        VmbErrorType bErr = pCommandFeature->SetValue(us);
+		if (bErr != VmbErrorSuccess)
+			return false;
+	} 
+
+	return true;
+}
+
+
+
 //                  1. Software trigger
 //                  2. Hardware trigger
 //                  3. Free Run trigger

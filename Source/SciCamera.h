@@ -57,6 +57,8 @@ public: // OPTMV API
 public: // Joe Ge added
 	VmbErrorType GetCameraID(std::string &rStrID);
 
+    bool SetExposureTime(double us);
+
 private:
 	CameraPtr m_pCamera;
 	int       m_nCameraMode;
@@ -69,6 +71,7 @@ private:
     FrameObserver*      m_pFrameObserver;           // Every camera has its own frame observer
 
 	bool SetInternalMode(int mode);
+
 
 	bool TriggerSoftwareSignal(); 
 	long WaitForNextImageReady(int ms);

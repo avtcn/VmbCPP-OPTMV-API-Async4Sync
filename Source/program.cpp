@@ -145,6 +145,13 @@ int main( int argc, char* argv[] )
 	{
 		cameras[0]->GetID(strCameraID);
 		camera.OpenCamera(strCameraID.c_str());
+        camera.SetExposureTime(18 * 1000.00f);
+	}
+	else
+	{
+		std::cout << "No AVT camera found!" << std::endl;
+		sys.Shutdown();
+		return 0;
 	}
 
 	std::string strOpenedCameraName;
@@ -155,21 +162,24 @@ int main( int argc, char* argv[] )
 
 
 
-	// Start image acquisition mode
-	camera.StartAcquire(1); //  1. Software trigger  
+	// Start image acquisition mode - choose one of below
+	//camera.StartAcquire(1); //  1. Software trigger  
 	//camera.StartAcquire(2); //  2. Hardware trigger  
-	//camera.StartAcquire(3); //  3. Free Run trigger 
+	camera.StartAcquire(3); //  3. Free Run trigger 
 
 
 	// Capture Images in one of three modes: SW/HW/Free
 	int i = 0;
 	while (i++ < 20000)
 	{
-		std::cout << "Fetching image i = " << i << ", ticket : " << tickets() << std::endl;
+		std::cout << "Fetching image i = " << i << ", time ticks : " << tickets() << std::endl;
 		std::vector<VmbUchar_t> imageRaw;
 
 		// Take one photo !!! 
+		long long tBegin = tickets();
 		camera.Shot(imageRaw, 10*1000);
+		long long tEnd = tickets();
+		long long tGapEach = tEnd - tBegin;
 
 		// Save raw data of image
 		// Use ImageJ or similar tool to view
@@ -182,14 +192,17 @@ int main( int argc, char* argv[] )
 		// FPS calculation, print image sequence information
 		long long tGap = 1; // 1ms
 		queueTickets.push(tickets());
-		while (queueTickets.size() > 11) {
+		while (queueTickets.size() > 5) {
 			queueTickets.pop();
 		}
 		if (queueTickets.size() >= 2) {
 			tGap = queueTickets.back() - queueTickets.front(); 
 			double fGapTwoShots = (tGap * 1.0) / (queueTickets.size() - 1); 
 			std::cout << std::fixed; 
-			std::cout << "Fetching image i = " << i << std::setprecision(4) << ", gap    : " << fGapTwoShots << " ms,      FPS = " << 1000.0 / fGapTwoShots << std::endl;
+			std::cout << "Fetching image i = " << i << std::setprecision(4) << ", gap    : " << fGapTwoShots << " ms,      "
+				<<"FPS = " << 1000.0 / fGapTwoShots  << "fps, "
+				<<"time_photo_consumed = " << tGapEach  << " ms"
+				<< std::endl;
 		}
 
 		if (_kbhit()) {

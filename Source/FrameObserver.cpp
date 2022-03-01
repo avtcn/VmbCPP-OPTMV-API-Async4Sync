@@ -157,13 +157,14 @@ void FrameObserver::FrameReceived( const FramePtr pFrame )
 
 			m_mutex.Lock();
 
-			m_framesQueue.push(TransformedData);
-
 			// Deleted the oldest buffers to avoid memory flood
-			while (m_framesQueue.size() > 100) {
+			while (m_framesQueue.size() > 20) {
 				std::cout << "WARNING: buffered frames flood size = " << m_framesQueue.size() << "\n";
-				m_framesQueue.pop();
+                m_framesQueue.pop();
+                m_framesQueue.empty();
 			}
+
+			m_framesQueue.push(TransformedData); 
 
 			m_mutex.Unlock();
 
