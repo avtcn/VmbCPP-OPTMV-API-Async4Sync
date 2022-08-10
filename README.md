@@ -1,10 +1,10 @@
 ## Introduction 
-Implement OPTMV Camera Interface API based on Vimba SDK C++ API.  
+Implement SIMPLE Camera Interface API based on Vimba SDK C++ API and avoid callback interface to get asynchronous frame from camera.  
 More details: https://github.com/avtcn/notes/blob/master/vimbasdk/vimba-cpp-3-programming-modes-api-console/vimba-cpp-3-programming-modes-api-console.md  
 
 ## Getting Started
 * Vimba SDK
-  Use the latest version, such as Vimba 4.2/4.3/5.0 on http://www.alliedvision.com/
+  Use the latest version, such as Vimba 4.2/4.3/5.0/6.0 on http://www.alliedvision.com/. If you are using USB3/G1/G5 cameras, the latest Vimba SDK is a must!  
 * OPTMV Camera API or similar one
   The API includes following calls:
   1. OpenCamera()
@@ -27,8 +27,8 @@ More details: https://github.com/avtcn/notes/blob/master/vimbasdk/vimba-cpp-3-pr
   Put this example in following folder, such as:
   ```
 C:\Users\Public\Documents\Allied Vision\Vimba_4.3\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\
-
 C:\Users\Public\Documents\Allied Vision\Vimba_5.0\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\
+C:\Users\Public\Documents\Allied Vision\Vimba_6.0\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\
   ```
 
   Compile Tool:  
