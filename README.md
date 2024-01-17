@@ -26,9 +26,9 @@ More details: https://github.com/avtcn/notes/blob/master/vimbasdk/vimba-cpp-3-pr
 
   Put this example in following folder, such as:
   ```
-C:\Users\Public\Documents\Allied Vision\Vimba_4.3\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\
-C:\Users\Public\Documents\Allied Vision\Vimba_5.0\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\
-C:\Users\Public\Documents\Allied Vision\Vimba_6.0\VimbaCPP_Examples\AsynchronousGrab\VimbaCPP-OPTMV-API-Async4Sync\
+C:\Users\Public\Documents\Allied Vision\Vimba_4.3\VimbaCPP_Examples\AsynchronousGrab\VmbCPP-OPTMV-API-Async4Sync\
+C:\Users\Public\Documents\Allied Vision\Vimba_5.0\VimbaCPP_Examples\AsynchronousGrab\VmbCPP-OPTMV-API-Async4Sync\
+C:\Users\Public\Documents\Allied Vision\Vimba_6.0\VimbaCPP_Examples\AsynchronousGrab\VmbCPP-OPTMV-API-Async4Sync\
   ```
 
   Compile Tool:  
@@ -56,7 +56,7 @@ C:\Users\Public\Documents\Allied Vision\Vimba_6.0\VimbaCPP_Examples\Asynchronous
 ---
 
 ## 代码更新
-https://github.com/avtcn/VimbaCPP-OPTMV-API-Async4Sync  
+https://github.com/avtcn/VmbCPP-OPTMV-API-Async4Sync  
 此案例中的相关代码更新到如上连接。
 
 ## 简介
@@ -191,13 +191,13 @@ int main( int argc, char* argv[] )
 
 
 ## 代码
-请至 https://github.com/avtcn/VimbaCPP-OPTMV-API-Async4Sync 下载。  
+请至 https://github.com/avtcn/VmbCPP-OPTMV-API-Async4Sync 下载。  
 此例子代码下载链接： 
-[VimbaCPP-OPTMV-API.zip](https://github.com/avtcn/notes/raw/master/vimbasdk/vimba-cpp-3-programming-modes-api-console/VimbaCPP-OPTMV-API.zip)  
+[VmbCPP-OPTMV-API.zip](https://github.com/avtcn/notes/raw/master/vimbasdk/vimba-cpp-3-programming-modes-api-console/VmbCPP-OPTMV-API-Async4Sync.zip)  
 
 
 上述代码请解压缩到Vimba C++例子目录中，例如：  
-`C:\Users\Public\Documents\Allied Vision\Vimba_2.1\VimbaCPP_Examples\VimbaCPP-OPTMV-API`
+`C:\Users\Public\Documents\Allied Vision\Vimba_2.1\VimbaCPP_Examples\VmbCPP-OPTMV-API-Async4Sync`
 
 
 运行结果如下，可以通过回车键进行中止：
