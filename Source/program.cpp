@@ -146,6 +146,9 @@ int main( int argc, char* argv[] )
 	if (!cameras.empty())
 	{
 		cameras[0]->GetID(strCameraID);
+
+		// Joe: assign a special camera - U158
+		//strCameraID = "DEV_1AB22C006FDF";
 		camera.OpenCamera(strCameraID.c_str());
 
 		std::cout << "Set to 18ms exposure time for this camera." << std::endl;
@@ -173,8 +176,8 @@ int main( int argc, char* argv[] )
 
 
 	// Capture Images in one of three modes: SW/HW/Free
-	int i = 0;
-	while (i++ < 20000)
+	long i = 0;
+	while (i++ < 20*1000*1000)
 	{
 		std::cout << "Fetching image i = " << i << ", time ticks : " << tickets() << std::endl;
 		std::vector<VmbUchar_t> imageRaw;
